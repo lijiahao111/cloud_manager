@@ -1,0 +1,13 @@
+server:
+  port: 5000
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/spring-cloud?serverTimezone=UTC&connectionTimeZone=Asia/Shanghai&useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true
+    username: root
+    password: '123456'
+  application:
+    name: userservice
+mybatis:
+  config-location: classpath:mybatis/mybatis-configuration.xml
+  mapper-locations: classpath:mybatis/*-mapper.xml
