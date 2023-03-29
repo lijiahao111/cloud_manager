@@ -22,8 +22,8 @@ public class OrderServiceImpl  implements OrderService {
     public Order gerOrderByid(Long id) {
         Order order = orderMapper.gerOrder(id);
         Long user_id = order.getUser_id();
-        User forObject = restTemplate.getForObject("http://localhost:5000/user/" + user_id, User.class);
-        order.setUser(forObject);
+        User user = restTemplate.getForObject("http://localhost:5000/user/" + user_id, User.class);
+        order.setUser(user);
         return order;
     }
 }
