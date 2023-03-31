@@ -26,6 +26,7 @@
         <cloud.version>2021.0.3</cloud.version>
         <jackson.version>2.14.2</jackson.version>
         <mybatis.version>3.0.0</mybatis.version>
+        <alibaba.version>2021.0.4.0</alibaba.version>
     </properties>
     <dependencyManagement>
         <dependencies>
@@ -33,6 +34,13 @@
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>
                 <version>${cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+                <version>${alibaba.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
