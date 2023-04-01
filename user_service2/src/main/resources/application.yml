@@ -8,6 +8,9 @@ spring:
     password: '000000'
   application:
     name: userservice
+  cloud:
+    nacos:
+      server-addr: localhost:8848
 mybatis:
   config-location: classpath:mybatis/mybatis-configuration.xml
   mapper-locations: classpath:mybatis/*-mapper.xml
