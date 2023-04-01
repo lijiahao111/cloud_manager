@@ -6,12 +6,11 @@
         <groupId>cn.wq</groupId>
         <artifactId>cloud_manager</artifactId>
         <version>0.0.1-SNAPSHOT</version>
-        <relativePath/> <!-- lookup parent from repository -->
+        <!--   <relativePath/> lookup parent from repository -->
     </parent>
     <groupId>cn.wq</groupId>
     <artifactId>user_service2</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>user_service</name>
 
 
     <dependencies>
