@@ -1,17 +1,30 @@
 server:
-  port: 6000
+  port: 5003
 
 spring:
   application:
     name: orderservice
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/spring-cloud?serverTimezone=UTC&connectionTimeZone=Asia/Shanghai&useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true
+    url: jdbc:mysql://localhost:3306/tb_order?serverTimezone=UTC&connectionTimeZone=Asia/Shanghai&useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true
     username: root
-    password: '123456'
+    password: '000000'
   cloud:
     nacos:
       server-addr: localhost:8848
+      discovery:
+        cluster-name: sd
+        namespace: fc47b927-0f1b-40ea-8946-aac905d15f81
+        ephemeral: false
+
 mybatis:
   config-location: classpath:mybatis/mybatis-configuration.xml
   mapper-locations: classpath:mybatis/*-mapper.xml
+userservice:
+  ribbon:
+    NFLoadbalancerRuleClassName: com.alibaba.cloud.nacos.ribbon.NacosRule
+logging:
+  level:
+    root: debug
+  pattern:
+    dateformat: yyyy-MM-dd

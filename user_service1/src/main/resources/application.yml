@@ -6,12 +6,14 @@ spring:
     url: jdbc:mysql://localhost:3306/tb_user?serverTimezone=UTC&connectionTimeZone=Asia/Shanghai&useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true
     username: root
     password: '000000'
-  application:
-    name: userservice
 
   cloud:
     nacos:
-      server-addr: localhost:8848
+      discovery:
+        cluster-name: hz
 mybatis:
   config-location: classpath:mybatis/mybatis-configuration.xml
   mapper-locations: classpath:mybatis/*-mapper.xml
+logging:
+  level:
+    root: debug
