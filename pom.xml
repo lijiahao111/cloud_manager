@@ -16,7 +16,9 @@
 
     <modules>
        <module>order_service</module>
-        <module>user_service</module>
+        <module>user_service1</module>
+        <module>user_service2</module>
+        <module>user_service3</module>
     </modules>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
